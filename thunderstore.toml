@@ -1,0 +1,33 @@
+[config]
+schemaVersion = "0.0.1"
+
+[package]
+namespace = "hazre"
+name = "MorePlayers"
+description = "Removes the 4-player cap in Goblin Cleanup. All players share one room."
+websiteUrl = "https://github.com/hazre/GoblinCleanupMorePlayers"
+containsNsfwContent = false
+
+[build]
+icon = "./icon.png"
+readme = "./README.md"
+outdir = "./build"
+
+[[build.copy]]
+source = "./GoblinCleanupMorePlayers/bin/Release/GoblinCleanupMorePlayers.dll"
+target = "plugins/"
+
+[[build.copy]]
+source = "./CHANGELOG.md"
+target = "/"
+
+[[build.copy]]
+source = "./LICENSE"
+target = "/"
+
+[publish]
+repository = "https://thunderstore.io"
+communities = ["goblincleanup"]
+
+[publish.categories]
+goblincleanup = ["mods"]

@@ -1,0 +1,35 @@
+[settings]
+idiomatic_version_file_enable_tools = ["dotnet"]
+experimental = true
+
+[hooks]
+enter = "dotnet restore"
+
+[tasks.restore]
+description = "Restore NuGet packages"
+run = "dotnet restore"
+
+[tasks.build]
+description = "Build the DLL"
+run = "dotnet build -c Release"
+
+[tasks.package]
+description = "Build Thunderstore package (via tcli)"
+depends = ["build"]
+run = "dotnet tcli build"
+
+[tasks.get-version]
+description = "Print the current package version"
+run = "dotnet msbuild GoblinCleanupMorePlayers/GoblinCleanupMorePlayers.csproj -getProperty:Version"
+
+[tasks.pin-actions]
+description = "Pin GitHub Actions to SHA commit hashes"
+run = "mise exec pinact@4.1.0 -- pinact run -u"
+
+[tasks.audit-actions]
+description = "Audit GitHub Actions for security issues"
+run = "mise exec zizmor@1.25.2 -- zizmor .github/workflows"
+
+[tools]
+cargo-binstall = "1.19.1"
+"cargo:knope" = "0.23.0"
