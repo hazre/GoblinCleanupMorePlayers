@@ -16,7 +16,9 @@ run = "dotnet build -c Release"
 [tasks.package]
 description = "Build Thunderstore package (via tcli)"
 depends = ["build"]
-run = "dotnet tcli build"
+run = [
+  "dotnet tcli build --package-version {{exec(command='mise run get-version')}}",
+]
 
 [tasks.get-version]
 description = "Print the current package version"

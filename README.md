@@ -28,6 +28,17 @@ The mod can be configured via `BepInEx/config/GoblinCleanupMorePlayers.cfg`:
 
 - `MaxPlayers`: (Default: `8`, Range: `1`–`250`) Maximum number of players. Steam lobbies support up to 250.
 
+## Development
+ 
+Install [mise](https://mise.jdx.dev/getting-started.html) and run `mise install` to set up tools.
+ 
+```bash
+mise run build    # Build the DLL
+mise run package  # Build the Thunderstore package
+```
+ 
+Run `mise tasks` to list all available tasks.
+
 ## License
 
 This project is licensed under MIT License. See [LICENSE](LICENSE) for details.
