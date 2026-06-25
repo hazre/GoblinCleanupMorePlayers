@@ -1,14 +1,14 @@
 <table>
   <tr>
-    <td><img src="icon.png" width="96" alt="More Players icon"></td>
+    <td><img src="https://raw.githubusercontent.com/hazre/GoblinCleanupMorePlayers/refs/heads/main/icon.png" width="96" alt="More Players icon"></td>
     <td>
       <h1>More Players</h1>
-      <p>A <a href="https://store.steampowered.com/app/2750010">Goblin Cleanup</a> mod that removes the 4-player cap.</p>
+      <p>A <a href="https://store.steampowered.com/app/2748340/Goblin_Cleanup/">Goblin Cleanup</a> mod that removes the 4-player cap.</p>
     </td>
   </tr>
 </table>
 
-[![Thunderstore Badge](https://modding.resonite.net/assets/available-on-thunderstore.svg)](https://thunderstore.io/c/goblincleanup/)
+[![Thunderstore Badge](https://modding.resonite.net/assets/available-on-thunderstore.svg)](https://thunderstore.io/c/goblin-cleanup/)
 
 All players share a single room instead of being split across separate rooms. Extra room doors are closed and labelled "Out of Order".
 

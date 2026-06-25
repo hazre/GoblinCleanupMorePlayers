@@ -10,6 +10,7 @@ description = "Restore NuGet packages"
 run = "dotnet restore"
 
 [tasks.build]
+depends = ["restore"]
 description = "Build the DLL"
 run = "dotnet build -c Release"
 
@@ -31,6 +32,16 @@ run = "mise exec pinact@4.1.0 -- pinact run -u"
 [tasks.audit-actions]
 description = "Audit GitHub Actions for security issues"
 run = "mise exec zizmor@1.25.2 -- zizmor .github/workflows"
+
+[tasks.release]
+description = "Create a new GitHub release"
+depends = ["package"]
+run = "knope release --verbose"
+
+[tasks.publish]
+description = "Publish to Thunderstore"
+depends = ["release"]
+run = "dotnet tcli publish --file build/*.zip"
 
 [tools]
 cargo-binstall = "1.19.1"
