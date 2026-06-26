@@ -1,0 +1,8 @@
+[providers]
+keychain = { type = "keychain", service = "fnox" }
+age = { type = "age", recipients = [
+  "age1ert7q03saatuwdn3v6y79ufz6frpvmcs8drfar2rzva2hnufxv0szmlnda",
+], identity = { provider = "keychain", value = "age-key" } }
+
+[secrets]
+TCLI_AUTH_TOKEN = { provider = "age", value = "YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBkb0laS1U0RUpOWGlyWkk3dkFQSTNyMDBkWlhkTmplelM2QlJSUUEwWldZCjlzd0FjL3ZhRFJhT2ljYUJRWUZvbWF6RnFEUDIvdzN0YnB0a1RnZUdLeFUKLT4gXHktZ3JlYXNlCnh4NlRWT0Nkam1BSTdWVElzd1BPSnlwTEtaeWRCNGZLdHlVQTFSQ0tUdkk1bzFSQXRCcDFWS2VHSW8veXR6UDYKbGs1WUtUYm9xM1VyN2VFaHRqRHMyd2JLY1NISDVid21uTUI3NmFVR2tBalBvUQotLS0gVmprRjNQTlNNL3JFZDZEV2xMMnlya2RYdzhsY2pKM3V0cTVkYzBUbXVEWQpu8QaSCXNXptHte5LnHyPxygeF+DxUEzNVmIICkLimMfn9OsOncPcgFp4pTdCkzjQnFrSG5ByCiMyPC/yNCX1sMgRk2xhSEI0=" }

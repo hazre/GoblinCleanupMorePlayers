@@ -41,7 +41,8 @@ run = "knope release --verbose"
 [tasks.publish]
 description = "Publish to Thunderstore"
 depends = ["release"]
-run = "dotnet tcli publish --file build/*.zip"
+tools = { fnox = "1.28.0", age = "1.3.1" }
+run = "fnox exec -- dotnet tcli publish --file build/*.zip"
 
 [tools]
 cargo-binstall = "1.19.1"
